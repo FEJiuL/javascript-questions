@@ -1287,3 +1287,27 @@ string 类型是可迭代的。扩展运算符将迭代的每个字符映射成�
 
 </p>
 </details>
+
+---
+
+###### 44. 结果是什么？
+
+```javascript
+setTimeout(() => console.log(a + b), 0);
+let a = 2, b = 3;
+```
+
+- A: 5
+- B: NaN
+- C: `SyntaxError`
+- D: `TypeError`
+
+<details><summary><b>答案</b></summary>
+<p>
+
+#### 答案: A
+
+setTimeout 属于异步任务，即使time = 0，他的执行时机也在let声明之后。
+
+</p>
+</details>
